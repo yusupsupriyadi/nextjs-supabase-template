@@ -15,8 +15,8 @@ export async function middleware(req) {
 	}
 
 	// jika pengguna tidak masuk dan jalur saat ini tidak / arahkan pengguna ke /
-	if (!user && req.nextUrl.pathname !== "/login") {
-		return NextResponse.redirect(new URL("/login", req.url));
+	if (!user && req.nextUrl.pathname !== "/") {
+		return NextResponse.redirect(new URL("/", req.url));
 	}
 
 	return res;
