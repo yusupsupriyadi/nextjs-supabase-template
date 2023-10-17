@@ -1,23 +1,4 @@
-// export default function Login() {
-// 	return (
-// 		<form
-// 			action='/auth/login' method='post'>
-// 			<label htmlFor='email'>Email</label>
-// 			<input name='email' />
-// 			<label htmlFor='password'>Password</label>
-// 			<input
-// 				type='password'
-// 				name='password'
-// 			/>
-// 			<button>Sign In</button>
-// 			<button formAction='/auth/sign-up'>Sign Up</button>
-// 			<button formAction='/auth/logout'>Sign Out</button>
-// 		</form>
-// 	);
-// }
-
 "use client";
-import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Avatar from "@mui/material/Avatar";
@@ -105,6 +86,14 @@ export default function Login() {
 							variant='contained'
 							sx={{ mt: 1, mb: 2 }}>
 							Sign Up
+						</Button>
+						<Button
+							type='submit'
+							formAction='/auth/logout'
+							fullWidth
+							variant='contained'
+							sx={{ mt: 1, mb: 2 }}>
+							Logout
 						</Button>
 						<Grid container>
 							<Grid
